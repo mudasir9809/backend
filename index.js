@@ -15,8 +15,12 @@ var corsOptions = {
 app.use(cors())
 app.use(express.json());
 
-
 app.get('/', async (req, res) => {
+ 
+
+    res.send(ok)
+})
+app.get('/get', async (req, res) => {
     let all = await User.find({})
 
     res.status(200).json({all:all})
