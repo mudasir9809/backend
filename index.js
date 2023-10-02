@@ -27,8 +27,8 @@ app.get('/get', async (req, res) => {
 })
 
 app.post('/data', (req, res) => {
-    const { name, crush } = req.body;
-    User.create({name:name, crush:crush})
+    const { name, crush, value } = req.body;
+    User.create({name:name, crush:crush, value:value})
     try {
         
         res.status(201).json({ success: true, message: "Invalid phone/email or password" })
